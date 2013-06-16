@@ -1,0 +1,98 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+// @font-face {
+// 	font-family: 'League Gothic';
+// 	src: url('../../lib/font/league_gothic-webfont.eot');
+// 	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+// 		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+// 		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+// 		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+// 
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// expanded so I could inline fonts as base64
+// @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,900);
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(/img/titillium-web-400.woff) format('woff');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Titillium WebBlack'), local('TitilliumWeb-Black'), url(/img/titillium-web-900.woff) format('woff');
+}
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+// $base01:    #586e75; // main heading color
+// $base01:    #1F0C06; // main heading color
+$darkRedBrown: #2E1209; // main heading color
+// $base00:    #657b83; // main text color
+$base01:    #FF774B; // link color (lightened below on hover)
+$base00:    #FFFFFF; // link color (lightened below on hover)
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3; // slide background color
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+// $blue:      #268bd2; // link color (lightened below on hover)
+// $blue:      #11B28C; // link color (lightened below on hover)
+// $blue:      #FF774B; // link color (lightened below on hover)
+$blue:      #11B28C; // link color (lightened below on hover)
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Titillium Web', sans-serif;
+$headingFont: 'Titillium Web', sans-serif;
+$letterSpacing: -0.02em;
+$boldLetterSpacing: -0.01em;
+$mainColor: $base00;
+$headingColor: $base01;
+$headingTextShadow: 0.05em 0.05em 0.25em $darkRedBrown, -0.05em -0.05em 0.25em $darkRedBrown;
+$boldTextShadow: 0.03em 0.03em 0.25em $darkRedBrown, -0.03em -0.03em 0.25em $darkRedBrown;
+$backgroundColor: url(/img/mars-dark-bg-1.jpg) #000 no-repeat 100% 100%;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+b {
+  color: $blue;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
